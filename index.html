@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+    <title>ToDo</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <span class="logo ">
+             <strong class="logo">TO DO </strong> 
+           
+        </span>
+        
+   </nav>   
+</header>
+<body>
+    <main class="">
+         <div class="container">
+
+              <div class="back-box">
+                    <div class="back-box-login" id="backBoxLogin">
+                         <h3>Do you have an account?</h3>
+                         <p>Log in to enter the website</p>
+                         <button class="btn btn-dark btn-block btn-lg" id="btn-login">Login</button>
+                    </div>
+                    <div class="back-box-register" id="backBoxRegister">
+                         <h3>You don't have an account?</h3>
+                         <p>Sign up to visit the website</p>
+                         <button  class="btn btn-dark btn-lg btn-block" id="btn-register">Sign up</button>
+                    </div>
+              </div>
+             
+         </div>
+     <!---   Login and form register    -->
+         <div class="container__login-register" id="loginRegister">
+               <form action="./home.html" method="post" class="form__login" id="login" name="loginForm">
+                  
+                         <h2>Login</h2>
+                  
+                    <div class="form-group">
+                        
+                         <input type="text" name="username" class="form-control form-control-lg" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                         
+                         <input type="text" name="password" class="form-control form-control-lg" placeholder="Password">
+                    </div>
+                    <div>
+                         <a href="">Forgot your password?</a>
+                    </div>
+                    <button id="loginButton"class="btn btn-dark btn-block btn-lg" type="submit" onclick="login()">Login</button>
+               </form>
+
+               <form action="" class="form__register" id="signIn">
+                    <h2>Sign Up</h2>
+                    <div class="form-group">
+                       
+                         <input type="text" name="name" class=" form-control form-control-md" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                    
+                         <input type="text" name="surname" class="form-control form-control-md" placeholder="Surname">
+                    </div>
+
+                    <div class="form-group">
+                    
+                         <input type="text" name="username" class="form-control form-control-md" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                       
+                         <input type="text" name="username" class="form-control form-control-md" placeholder="Username">
+                    </div>
+               
+                    <div class="form-group">
+                      
+                         <input type="password" name="password" class="form-control form-control-md" placeholder="Password">
+                    </div>
+               
+                         <button class="btn btn-dark btn-block btn-lg">Sign Up</button>
+                    
+
+               </form>
+         </div> 
+   </main>
+</body>
+</html>
+<script src="./js/login-form.js"></script>
+<script src="./js/login.js"></script>
+    
+
+
