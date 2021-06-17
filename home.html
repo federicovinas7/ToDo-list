@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
    
     <title>Home</title>
 </head>
@@ -16,6 +18,7 @@
            
         </span>
         <ul class="navbar-nav ml-auto">
+           
             <li class="nav-item">
                 <a class="nav-link" href="">Welcome</a>
             </li>
@@ -26,27 +29,144 @@
         
    </nav>   
 </header>
-<body>
-    
-    <h1 class="text-center">WELCOMEEEE</h1>
+<body>  
 
-    
-    <div class="">
+    <!---              SIDEBAR  -->
+    <div class="sidebar">
         <div>
-         <ul class="sidebar-nav">
-             <li class="sidebar-brand">
-                 <a href="">New Task</a>
+         <ul class="nav-link">
+             <li >
+                <i color="white" class='bx bx-user bx-md ' ></i>
              </li>
-             
-             <li class="sidebar-brand">
-                <a href="">View All Task</a>
-            </li>
-
-         </ul>
+        
+             <li>
+                <i class='bx bx-grid-alt bx-md bx-tada-hover' ></i>
+             </li>
+             <li>
+                 <a href="">
+                    <i class='bx bxs-plus-square bx-md bx-tada-hover'></i>
+                 </a>
+                
+             </li>
+                
+            
         </div>
 
+    </div>    
+    <!---   ACA VA LA LISTA DE TAREAS-->
+    <div>
+        <section class ="mb-5">
+        <div class="container">
+            <table class="table-striped table bg-secondary table-borderless mt-3 ml-5" >
+                <thead >
+                    <th>Task Number</th>
+                    <th>Task Name</th>
+                    <th>Folder</th>
+                    <th>Edit</th>
+                    <th>Remove</th>
+                </thead>
+                <tbody class="table-striped bg-light">
+                    <tr>
+                        <td>Number</td>
+                        <td>Name</td>
+                        <td>Folder</td>
+                        <td>
+                            <a href="">
+                            <i class='bx bx-edit bx-md' ></i>    
+                            </a> 
+                        </td>
+                        <td>
+                            <a href="">
+                            <i class='bx bxs-trash bx-md '></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td>Name</td>
+                        <td>Folder</td>
+                        <td>
+                            <a href="">
+                            <i class='bx bx-edit bx-md' ></i>    
+                            </a> 
+                        </td>
+                        <td>
+                            <a href="">
+                                <i class='bx bxs-trash bx-md '></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td>Name</td>
+                        <td>Folder</td>
+                        <td>
+                            <a href="">
+                            <i class='bx bx-edit bx-md' ></i>    
+                            </a> 
+                        </td>
+                        <td>
+                            <a href="">
+                                <i class='bx bxs-trash bx-md '></i>
+                            </a>
+                        </td>
+                    </tr>
+                  <tr>
+                      <td>
+                          <span>
+                              <button class="btn-lg btn-primary">new Task</button>
+                      
+                          </span>
+                      </td>
+                      <td>
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                          
+                  </tr>
+                    
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
     </div>
-    
+    <!-- 
+    <div >
+        <h2><a href="">Task</a>  </h2>
+      
+        <table>
+                
+            <tr>
+              <td><label><input type="checkbox" ></label></td>
+              <td><a href="">Edit</a></td>
+              <td><a href=""></a>Remove</td>
+            </tr>
+          
+            <tr>
+                <td><label><input type="checkbox" ></label></td>
+                <td><a href=""">Edit</a></td>
+                <td><a href="">Remove</a></td>
+            </tr>
+        </table>
+      
+        <form class="submit" action="" method=POST>
+          <input type="hidden" name="folderId" value="">
+          <input type="text" maxlength="50" name="description" placeholder="New Task" id="description" autofocus required>
+          <button>Add</button>
+        </form>
+    </div>
+    -->
 
 </body>
 </html>
+<!--<script>
+    let data;
+    fetch('http://190.189.135.217:8080/task').then(function(){
+
+    })
+</script>-->
