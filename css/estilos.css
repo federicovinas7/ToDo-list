@@ -175,6 +175,9 @@ transition: all 500ms;
           position: relative;
      }
     
+     .modal h5{
+          color: white;
+     }
    }  
    
  

@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/sidebar.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/estilos.css">
+        <link rel="stylesheet" href="./css/sidebar.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <title>ToDO</title>
+    
+ 
+   
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
    
     <title>Home</title>
 </head>
@@ -36,7 +46,7 @@
         <div>
          <ul class="nav-link">
              <li >
-                <i color="white" class='bx bx-user bx-md ' ></i>
+                <i  class='bx bx-user bx-md ' ></i>
              </li>
         
              <li>
@@ -57,116 +67,108 @@
     <div>
         <section class ="mb-5">
         <div class="container">
-            <table class="table-striped table bg-secondary table-borderless mt-3 ml-5" >
+            <table class="table-striped table bg-secondary table-borderless mt-3 ml-5"  >
                 <thead >
                     <th>Task Number</th>
                     <th>Task Name</th>
-                    <th>Folder</th>
+                    <th>Done</th>
                     <th>Edit</th>
                     <th>Remove</th>
                 </thead>
-                <tbody class="table-striped bg-light">
-                    <tr>
-                        <td>Number</td>
-                        <td>Name</td>
-                        <td>Folder</td>
-                        <td>
-                            <a href="">
-                            <i class='bx bx-edit bx-md' ></i>    
-                            </a> 
-                        </td>
-                        <td>
-                            <a href="">
-                            <i class='bx bxs-trash bx-md '></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Number</td>
-                        <td>Name</td>
-                        <td>Folder</td>
-                        <td>
-                            <a href="">
-                            <i class='bx bx-edit bx-md' ></i>    
-                            </a> 
-                        </td>
-                        <td>
-                            <a href="">
-                                <i class='bx bxs-trash bx-md '></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Number</td>
-                        <td>Name</td>
-                        <td>Folder</td>
-                        <td>
-                            <a href="">
-                            <i class='bx bx-edit bx-md' ></i>    
-                            </a> 
-                        </td>
-                        <td>
-                            <a href="">
-                                <i class='bx bxs-trash bx-md '></i>
-                            </a>
-                        </td>
-                    </tr>
-                  <tr>
-                      <td>
-                          <span>
-                              <button class="btn-lg btn-primary">new Task</button>
-                      
-                          </span>
-                      </td>
-                      <td>
-                      </td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                          
-                  </tr>
+                <tbody class="table-striped bg-light" id="task-table" >
                     
-
                 </tbody>
+                <tfoot>
+                    <tr>
+                        
+                             <td>
+                                 <button type="button" class="btn-lg btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#modalNewTask">new Task</button>
+                             </td>
+                        
+                    </tr>
+                   
+                </tfoot>
             </table>
         </div>
-
     </section>
 
-
     </div>
-    <!-- 
-    <div >
-        <h2><a href="">Task</a>  </h2>
-      
-        <table>
-                
-            <tr>
-              <td><label><input type="checkbox" ></label></td>
-              <td><a href="">Edit</a></td>
-              <td><a href=""></a>Remove</td>
-            </tr>
-          
-            <tr>
-                <td><label><input type="checkbox" ></label></td>
-                <td><a href=""">Edit</a></td>
-                <td><a href="">Remove</a></td>
-            </tr>
-        </table>
-      
-        <form class="submit" action="" method=POST>
-          <input type="hidden" name="folderId" value="">
-          <input type="text" maxlength="50" name="description" placeholder="New Task" id="description" autofocus required>
-          <button>Add</button>
-        </form>
-    </div>
-    -->
-
 </body>
 </html>
-<!--<script>
-    let data;
-    fetch('http://190.189.135.217:8080/task').then(function(){
 
-    })
-</script>-->
+    <!--- modal modificar tarea-->
+
+
+  <div class="modal fade" id="modalModifyTask" tabindex="-1" role="dialog" aria-labelledby="modalModifyTaskLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header btn-primary">
+              <h5 class="modal-title" id="">Modify Task</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="home.html">
+                  <input type="hidden"  id='idTask'>
+                  <div>
+                      <label for="">Description</label>
+                  </div>
+                  <div>
+                      <input class ="form-control"type="text" name="description" id="description">
+                  </div>
+                  <label for="">Done</label>
+                  <input class="checkbox-modal"type="checkbox" name="" id="done">
+               
+                  
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="editTask()">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+
+    <!--       MODAL NEW TASK        -->      
+
+    <div class="modal fade" id="modalNewTask" tabindex="-1" role="dialog" aria-labelledby="modalNewTaskLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header btn-primary">
+              <h5 class="modal-title text-center"  id="">New Task</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="home.html">
+                  <div >
+                          <label for="">Description</label>
+                  </div>
+                  <div >
+                      
+                          <input class="form-control"type="text" name="description" id="newDescription">
+                      
+                  
+                  </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" onclick="newTask()" data-bs-dismiss="modal" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      
+
+
+
+<script src="js/main.js"></script>
+<script src="js/deleteMethod.js"></script>
+<script src="js/editTask.js"></script>
+<script src="js/newTask.js"></script>
