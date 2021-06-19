@@ -21,18 +21,18 @@ fetch(API_URL)
     
             var row = table.insertRow();
             var cell = row.insertCell(0);
-            cell.innerHTML = data[count].id;
+            cell.innerHTML = n.id;
             var cell1 = row.insertCell(1);
-            cell1.innerHTML = data[count].description;
+            cell1.innerHTML = n.description;
             var cell2 = row.insertCell(2);
-            cell2.innerHTML = data[count].done;
+            cell2.innerHTML = n.done;
             var cell3 = row.insertCell(3);
             cell3.innerHTML = editButton;
-            cell3.setAttribute('onclick','assignId('+data[count].id+')');
+            cell3.setAttribute('onclick','assignId('+n.id+')');
             var cell4 = row.insertCell(4);
             cell4.innerHTML = trashButton;
             cell4.setAttribute('id',count);
-            cell4.setAttribute('onclick','deleteTask('+data[count].id+')');
+            cell4.setAttribute('onclick','deleteTask('+n.id+')');
             count++;
         })
     })

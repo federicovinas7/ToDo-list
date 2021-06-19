@@ -28,14 +28,14 @@ function editTask(){
 
    
     var xhr = new XMLHttpRequest();
-xhr.open("PUT", 'http://localhost:8080/tasks', true);
-xhr.setRequestHeader('Content-Type', 'application/json');
-xhr.send(JSON.stringify(
-   task
-));
-flag=1;
-if(flag===1){
-    location.reload();
-    flag = 0;
-}
+    xhr.open("PUT", 'http://localhost:8080/tasks', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(
+    task
+    ));
+  //  flag=1;
+    //if(flag===1){
+        location.reload();
+       // flag = 0;
+   //}
 }

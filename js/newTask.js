@@ -22,11 +22,9 @@ xhr.send(JSON.stringify(
     
 ));
 
-bandera=1;
-if(bandera===1){
+
     location.reload();
-    bandera = 0;
-}
+  
 
 }
 

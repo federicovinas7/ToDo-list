@@ -1,17 +1,29 @@
-let username = document.querySelector.getElementsByTagName('username');
-let password = document.querySelector.getElementsByTagName('password');
+const API_LOGIN = "http://localhost:8080/user/login";
 
-let user = "user";
-let pass = "1234";
+
 
 //button
 document.getElementById('loginButton').addEventListener("click",login);
 
 function login (username,password)
 {
+        username = document.getElementById('loginUsername').value;
+        password = document.getElementById('loginPassword').value;
+    
 
-   
-    if(username === user){
+
+
+    fetch(API_LOGIN)
+    .then(function(response) {
+        return response.json();
+
+    })
+    if (response!=null){
+        location.replace(UR)
+    }
+ 
+
+   /* if(username === user){
 
         if(password === pass){
             document.loginForm.submit();
@@ -19,5 +31,5 @@ function login (username,password)
     }
     else{
         alert("incorrect user or password");
-    }
+    }*/
 }
