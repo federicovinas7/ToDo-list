@@ -1,35 +1,24 @@
 const API_LOGIN = "http://localhost:8080/user/login";
 
-
+let user = {
+    username : "",
+    password : ""
+}
 
 //button
 document.getElementById('loginButton').addEventListener("click",login);
 
-function login (username,password)
+function login ()
 {
-        username = document.getElementById('loginUsername').value;
-        password = document.getElementById('loginPassword').value;
     
+        user.username = document.getElementById('loginUsername').value;
+        user.password = document.getElementById('loginPassword').value;
 
-
-
-    fetch(API_LOGIN)
-    .then(function(response) {
-        return response.json();
-
-    })
-    if (response!=null){
-        location.replace(UR)
-    }
- 
-
-   /* if(username === user){
-
-        if(password === pass){
-            document.loginForm.submit();
-        }
-    }
-    else{
-        alert("incorrect user or password");
-    }*/
+    // HAGO UN POST AL ENDPOINT PARA LOGEARME
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", API_LOGIN, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(user));
+    
+    //ACA DEBERIA HACER UN FETCH DEL USER O DEL TOKEN VERIFICAR Y REDIRIGIR
 }
