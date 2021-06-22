@@ -29,6 +29,7 @@ public class TodoApiApplication {
 					.antMatchers(HttpMethod.POST, "/login").permitAll()
 					.antMatchers(HttpMethod.POST, "/register").permitAll()
 					.anyRequest().authenticated();
+			http.cors();
 		}
 	}
 }

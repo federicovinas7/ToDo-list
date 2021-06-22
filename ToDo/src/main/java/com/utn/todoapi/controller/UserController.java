@@ -28,6 +28,7 @@ import static com.utn.todoapi.utils.Constants.AUTH_USER;
 import static com.utn.todoapi.utils.Constants.JWT_SECRET;
 
 @RestController
+@CrossOrigin
 @RequestMapping
 public class UserController {
 

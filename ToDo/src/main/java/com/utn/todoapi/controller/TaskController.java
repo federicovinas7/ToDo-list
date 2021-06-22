@@ -19,6 +19,7 @@ import javax.validation.ConstraintViolationException;
 import static com.utn.todoapi.utils.Response.response;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/tasks")
 public class TaskController {
 
@@ -30,7 +31,6 @@ public class TaskController {
         this.taskService = taskService;
         this.userService = userService;
     }
-
     @GetMapping
     public ResponseEntity getAll(Authentication auth){
 
